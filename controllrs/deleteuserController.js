@@ -8,7 +8,7 @@ const deleteUser = (req, res) => {
     const users = [];
     loadUsers(users, './data/users.json');
     
-    const getUser = users.findIndex(user => user.id === parseInt(userId));
+    const getUser = users.findIndex(user => user.id === userId);
     if (getUser === -1) {
         return res.json({ message: 'User not found' });
     }
