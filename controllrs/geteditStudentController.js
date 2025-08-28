@@ -6,11 +6,12 @@ const geteditStudent = (req, res) => {
     }
     const students = [];
     loadStudents(students, './data/students.json');
-    const getStudent = students.find((student) => student.id === studentId);
+    const getStudent = students.find((student) => student.id == studentId);
     if (!getStudent) {
         return res.json({ message: 'Student not found' });
     }
 
-    return res.render('edit-student', { page: 'edit-student', student: getStudent, message: 'successful' });
+
+    return res.render('edit-student', { page: 'edit-student', student: getStudent, message: '' });
 }
 module.exports = { geteditStudent };

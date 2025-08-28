@@ -11,7 +11,7 @@ const { logout } = require("./controllrs/logoutController");
 const { deleteUser } = require("./controllrs/deleteuserController");
 const { geteditStudent } = require("./controllrs/geteditStudentController");
 const { deleteStudent } = require("./controllrs/deleteStudentController")
-
+const { editStudent } = require("./controllrs/editStudentcontroller");
 app.get("/login",getlogin);
 
 app.post("/login",index);
@@ -34,6 +34,6 @@ app.get("/delete-user/:id",deleteUser);
 
  app.get("/edit-student/:id",geteditStudent);
 
-// app.post("/edit-student/:id",editStudent);
+app.post("/edit-student/:id",editStudent);
 
  app.post("/delete-student/:id",deleteStudent);
